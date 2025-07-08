@@ -1,5 +1,5 @@
 # YOLOv11-OBB-TensorRT-HighResTiling-MT-CPP
-You Only Look Once (YOLO) version 11 Oriented Bounding Boxes Object Detection on NVIDIA CUDA TensorRT with High Resolution Tiling on Multi Threading CPU in C++ Code
+You Only Look Once (YOLO) version 11 Oriented Bounding Boxes Object Detection on NVIDIA TensorRT and High Resolution Tiling on NVIDIA CUDA with Multi Threading GPU Stream in C++ Code
 
 ## Introduction
 The major usage of OBB is the aerial image which may be very high resolution with very small object. In such case, tiling original image into small tile and inference can detect such a small object.
