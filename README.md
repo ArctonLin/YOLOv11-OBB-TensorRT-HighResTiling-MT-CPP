@@ -1,6 +1,8 @@
 # YOLOv11-OBB-TensorRT-HighResTiling-MT-CPP
 You Only Look Once (YOLO) version 11 Oriented Bounding Boxes Object Detection on NVIDIA TensorRT and High Resolution Tiling on NVIDIA CUDA with Multi Threading GPU Stream in C++ Code
 
+This code achieve 271.143 FPS of (3x1024x1024) on YOLOv11n-OBB with RTX4070 Ti Super 16GB (Including reading and decoding original image, tiling on original image, concat the result and draw result on original image)
+
 ## Introduction
 The major usage of OBB is the aerial image which may be very high resolution with very small object. In such case, tiling original image into small tile and inference can detect such a small object.
 
@@ -156,8 +158,6 @@ for (int i = 0;i < image_paths.size();++i) {
 
 ## Performance
 Test with DOTAv1 test images with dynamic resolution from 211x521 to 10240x4096, image smaller than 1024 (tile_h, tile_W) or larger than 8192 (max_img_size) will be resized. (we can increase max_img_size but consume more GPU VRAM)
-
-Our code achieve 271.143 FPS of (3x1024x1024) on YOLOv11n-OBB with RTX4070 Ti Super 16GB (Including reading and decoding original image, tiling on original image, concat the result and draw result on original image)
 
 ```
 Image Count: 937 files
